@@ -12,7 +12,7 @@ export const siteMetadata = {
     image: "/images/og-image.png",
     twitterImage: "/images/og-image.png",
     socialBanner: "/images/og-image.png",
-    email: "adityyasridharofficial@gmail.com",
+    email: "adityasridharofficial@gmail.com",
     github: "https://github.com/Ady-OZz",
     twitter: "",
     linkedin: "https://www.linkedin.com/in/aditya-sridhar-niet/",

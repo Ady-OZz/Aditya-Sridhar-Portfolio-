@@ -24,7 +24,7 @@ git push -u origin main --force
 - Build command: pnpm build
 - Install command: pnpm install
 - Add environment variables before deploy:
-	- NODEMAILER_USER = adityyasridharofficial@gmail.com
+	- NODEMAILER_USER = adityasridharofficial@gmail.com
 	- NODEMAILER_PASS = your Google App Password (see Step 4)
 
 ### Step 3: After Deploy
