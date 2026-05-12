@@ -2,27 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 @layer base {
-     :root {
-        --background: 220 20% 8%;
-        --foreground: 210 40% 96%;
-        --border: 217 19% 18%;
-        --destructive: 0 84% 60%;
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 240 10% 3.9%;
+        --border: 240 5.9% 90%;
+        --destructive: 0 84.2% 60.2%;
         --destructive-foreground: 0 0% 98%;
-        --accent: 183 65% 40%;
-        --accent-foreground: 0 0% 100%;
-        --muted: 217 19% 14%;
-        --muted-foreground: 215 20% 60%;
+        --accent: 183 65% 35%;
+        --accent-foreground: 240 5.9% 10%;
+        --muted: 240 4.8% 95.9%;
+        --muted-foreground: 240 3.8% 46.1%;
     }
+
     .dark {
-        --background: 220 20% 5%;
-        --foreground: 210 40% 96%;
-        --border: 217 19% 16%;
+        --background: 240 10% 3.9%;
+        --foreground: 0 0% 98%;
+        --border: 240 3.7% 15.9%;
         --destructive: 0 62.8% 30.6%;
         --destructive-foreground: 0 0% 98%;
-        --accent: 183 63% 45%;
-        --accent-foreground: 0 0% 100%;
-        --muted: 217 19% 11%;
-        --muted-foreground: 215 20% 55%;
+        --accent: 183 63% 40%;
+        --accent-foreground: 0 0% 98%;
+        --muted: 240 3.7% 15.9%;
+        --muted-foreground: 240 5% 64.9%;
     }
     * {
         @apply border-border;

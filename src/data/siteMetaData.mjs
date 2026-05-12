@@ -6,7 +6,7 @@ export const siteMetadata = {
     language: "en-us",
     theme: "dark",
     siteName: "Aditya Sridhar Portfolio",
-    siteUrl: "https://aditya-sridhar.vercel.app",
+    siteUrl: "https://aditya-sridhar-portfolio.vercel.app/",
     siteRepo: "https://github.com/Ady-OZz",
     siteLogo: "/favicon.ico",
     image: "/images/og-image.png",
@@ -17,5 +17,5 @@ export const siteMetadata = {
     twitter: "",
     linkedin: "https://www.linkedin.com/in/aditya-sridhar-niet/",
     locale: "en-US",
-    googleSiteVerification: "",
+    googleSiteVerification: "AgntdTtGAT2ItbDy1rgHaFuj_eUcVW43LQQkjIqNILM",
 };

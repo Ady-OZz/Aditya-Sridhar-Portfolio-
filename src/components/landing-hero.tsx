@@ -73,7 +73,7 @@ export default function LandingHero() {
                         animate={{ y: 0, opacity: 1 }}
                         exit={{ y: -10, opacity: 0 }}
                         transition={{ duration: 0.3 }}
-                        className="text-xl font-semibold text-zinc-900 dark:text-zinc-100 md:text-3xl"
+                        className="text-xl font-semibold text-foreground md:text-3xl"
                       >
                         {ROLE_TITLES[roleIndex]}
                       </motion.span>
@@ -81,7 +81,7 @@ export default function LandingHero() {
                   </div>
                 </FadeUp>
                 <FadeUp key="description" duration={0.6} delay={0.2}>
-                  <p className="mt-6 max-w-2xl text-base font-semibold text-zinc-900 dark:text-zinc-200 sm:text-base md:text-xl">
+                  <p className="mt-6 max-w-2xl text-base font-semibold text-foreground sm:text-base md:text-xl">
                     Integrated M.Tech (CSE) student at NIET. Building scalable
                     apps with Java, Python, and React.
                   </p>
@@ -100,11 +100,12 @@ export default function LandingHero() {
                       View Projects
                     </Link>
                     <a
-                      href="/resume.pdf"
-                      download
+                      href="https://drive.google.com/file/d/19oWSfeielzVApqE094LbzLFmvuj5e0uc/view?usp=drive_link"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center justify-center rounded-full border border-accent/40 px-6 py-3 text-sm font-semibold text-accent transition-colors hover:border-accent hover:bg-accent/10 sm:text-base"
                     >
-                      Download Resume
+                      View Resume
                     </a>
                   </div>
                 </FadeUp>
@@ -145,7 +146,7 @@ export default function LandingHero() {
                   <FadeUp key="hero-image" duration={0.6} delay={0.2}>
                     <DuotoneImage
                       src="/images/profile.webp"
-                      fallbackSrc="/images/heroProfile.png"
+                      fallbackSrc="/images/heroProfile.jpeg"
                       width={520}
                       height={640}
                       className="h-auto w-full rounded-2xl border border-accent/20"

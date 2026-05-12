@@ -1,54 +1,64 @@
-# Aditya Sridhar Portfolio
+# Aditya Sridhar — Portfolio
 
-Personal developer portfolio built with Next.js (Pages Router) and Tailwind CSS.
+Personal developer portfolio showcasing projects, skills, and experience.
+
+🔗 **Live:** [aditya-sridhar-portfolio.vercel.app](https://aditya-sridhar-portfolio.vercel.app)
+
+---
 
 ## Tech Stack
 
-- Next.js, React, TypeScript
-- Tailwind CSS + CSS variables
-- Framer Motion
-- Nodemailer (API route)
-- pnpm
+- **Framework:** Next.js 13 (Pages Router), React 18, TypeScript
+- **Styling:** Tailwind CSS + CSS custom properties (light/dark theme)
+- **Animations:** Framer Motion
+- **Contact:** Nodemailer (API route)
+- **Package Manager:** pnpm
 
 ## Quick Start
 
 ```bash
 pnpm install
-cp .env.example .env
+cp .env.example .env   # then fill in values
 pnpm dev
 ```
 
-Open <http://localhost:3000>.
+Open [http://localhost:3000](http://localhost:3000).
 
 ## Environment Variables
 
-Set these in `.env` (never commit it):
+Create a `.env` file (never commit it):
 
 ```
 NODEMAILER_USER=you@gmail.com
 NODEMAILER_PASS=your_google_app_password
 ```
 
+> To get a Google App Password: enable 2-Step Verification → search "App passwords" → create one named `portfolio-nodemailer`.
+
 ## Customization
 
-- Update copy and data in `src/data/` (projects, skills, experience, education)
-- Update SEO fields in `src/data/siteMetaData.mjs`
-- Update theme tokens in `src/styles/globals.css`
+| What                | Where                          |
+| ------------------- | ------------------------------ |
+| Projects & skills   | `src/data/`                    |
+| SEO & site metadata | `src/data/siteMetaData.mjs`    |
+| Theme colors        | `src/styles/globals.css`       |
+| Profile photo       | `public/images/profile.webp`   |
+| Project screenshots | `public/images/projects/`      |
 
-## Assets
+## Resume
 
-- Profile photo: `public/images/profile.webp`
-- Project images: `public/images/projects/`
-- Resume: `public/resume.pdf`
+📄 [View Resume (Google Drive)](https://drive.google.com/file/d/19oWSfeielzVApqE094LbzLFmvuj5e0uc/view?usp=drive_link)
 
-## Nodemailer Setup
+## Deployment
 
-1. Enable 2-step verification in your Google account.
-2. Create a Google App Password.
-3. Use it for `NODEMAILER_PASS`.
+The site auto-deploys to **Vercel** on every push to `main`.
 
-## Sitemap and SEO
+| Setting         | Value          |
+| --------------- | -------------- |
+| Framework       | Next.js        |
+| Build command   | `pnpm build`   |
+| Install command | `pnpm install` |
 
-- Generate sitemap and robots.txt: `pnpm sitemap`
-- Add Google Search Console verification to `src/data/siteMetaData.mjs`
-- Update `siteUrl` after deployment
+## License
+
+MIT

@@ -28,7 +28,7 @@ function InfoSection({ title, items }: { title: string; items: string[] }) {
         {items.map((item) => (
           <div
             key={item}
-            className="rounded-2xl border border-accent/20 bg-background p-6 text-foreground shadow-sm dark:bg-zinc-900"
+            className="rounded-2xl border border-accent/20 bg-background p-6 text-foreground shadow-sm"
           >
             <p className="text-sm font-medium text-muted-foreground sm:text-base">
               {item}
