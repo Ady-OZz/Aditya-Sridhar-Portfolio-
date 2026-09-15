@@ -3,7 +3,7 @@ import { NextSeo } from "next-seo";
 import AboutHero from "@/components/about-hero";
 import CertificationsShowcase from "@/components/certifications/certifications-showcase";
 import ExperienceShowcaseList from "@/components/experience/experience-showcase-list";
-import { CERTIFICATIONS } from "@/data/certifications";
+import { CERTIFICATION_GROUPS } from "@/data/certifications";
 import { EXPERIENCE } from "@/data/experience";
 import { EDUCATION } from "@/data/education";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
@@ -77,7 +77,10 @@ export default function About() {
       <AboutHero />
       <ExperienceShowcaseList title="Education" details={EDUCATION} />
       <ExperienceShowcaseList title="Experience" details={EXPERIENCE} />
-      <CertificationsShowcase title="Certifications" items={CERTIFICATIONS} />
+      <CertificationsShowcase
+        title="Certifications"
+        groups={CERTIFICATION_GROUPS}
+      />
       <InfoSection title="Publications" items={publications} />
       <InfoSection title="Achievements" items={achievements} />
     </>

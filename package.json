@@ -12,8 +12,8 @@
     "add-screenshots": "node ./scripts/add-project-screenshots.mjs",
     "add-certifications": "node ./scripts/add-certifications.mjs",
     "analyze": "cross-env ANALYZE=true next build",
-    "format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,mdx,css,json}\"",
-    "format:fix": "prettier --write \"src/**/*.{js,jsx,ts,tsx,mdx,css,json}\"",
+    "format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,mdx,mjs,css,json}\"",
+    "format:fix": "prettier --write \"src/**/*.{js,jsx,ts,tsx,mdx,mjs,css,json}\"",
     "prepare": "husky install"
   },
   "dependencies": {
