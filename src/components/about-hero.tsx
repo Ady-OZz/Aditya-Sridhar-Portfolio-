@@ -15,7 +15,7 @@ export default function AboutHero() {
           <FadeUp key="hero-image" duration={0.6}>
             <DuotoneImage
               src="/images/profile.webp"
-              fallbackSrc="/images/heroProfile.png"
+              fallbackSrc="/images/heroProfile.jpeg"
               width={100}
               height={100}
               className="h-auto w-full px-0 xl:px-16"
