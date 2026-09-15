@@ -16,7 +16,7 @@ export const EDUCATION: ExperienceShowcaseListItemProps[] = [
     title: "Senior Secondary Education",
     organisation: {
       name: "Ramjas School RKP",
-      href: "https://ramjasschoolrkp.org/",
+      href: "https://ramjasschoolrkpuram.com/",
     },
     date: "2020-2021",
     location: "RK Puram, Delhi",
@@ -26,7 +26,7 @@ export const EDUCATION: ExperienceShowcaseListItemProps[] = [
     title: "Secondary Education",
     organisation: {
       name: "Chinmaya Vidyalaya",
-      href: "https://chinmayavidyalaya.in/",
+      href: "https://www.chinmayavvdelhi.ac.in/",
     },
     date: "2018-2019",
     location: "Vasant Vihar, Delhi",

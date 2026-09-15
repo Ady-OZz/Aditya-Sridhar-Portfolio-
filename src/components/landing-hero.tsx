@@ -51,7 +51,7 @@ export default function LandingHero() {
       }}
       transition={{ type: "spring", stiffness: 100 }}
       ref={ref}
-      className="flex max-h-[1000px] min-h-[calc(100vh-200px)] items-center px-6 sm:px-14 md:h-[calc(100vh-200px)] md:min-h-max md:px-20"
+      className="flex min-h-[calc(100vh-150px)] items-center px-6 py-20 sm:px-14 md:px-20"
     >
       <div className="w-full">
         <div className="mx-auto max-w-7xl">

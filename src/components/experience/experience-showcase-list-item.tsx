@@ -1,18 +1,9 @@
-import { RefObject, useRef } from "react";
+import { useRef } from "react";
 import Link from "next/link";
 
-import { motion, useScroll } from "framer-motion";
+import { motion } from "framer-motion";
 
-export interface ExperienceListIconProps {
-  iconRef: RefObject<HTMLElement>;
-}
-
-function ShowCaseLiIcon(props: ExperienceListIconProps) {
-  const { scrollYProgress } = useScroll({
-    target: props.iconRef,
-    offset: ["center end", "center center"],
-    layoutEffect: false,
-  });
+function ShowCaseLiIcon() {
   return (
     <figure className="absolute left-0 stroke-zinc-900">
       <svg width="75" height="75" viewBox="0 0 100 100">
@@ -22,10 +13,7 @@ function ShowCaseLiIcon(props: ExperienceListIconProps) {
           r="20"
           className="fill-none stroke-accent stroke-1"
         />
-        <motion.circle
-          style={{
-            pathLength: scrollYProgress,
-          }}
+        <circle
           cx="50"
           cy="27"
           r="20"
@@ -54,7 +42,7 @@ export default function ExperienceShowcaseListItem(
   const ref = useRef(null);
   return (
     <li ref={ref} className="mx-auto mb-14 flex w-[60%] flex-col gap-1">
-      <ShowCaseLiIcon iconRef={ref} />
+      <ShowCaseLiIcon />
       <motion.div
         initial={{ y: 50 }}
         whileInView={{ y: 0 }}

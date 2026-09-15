@@ -5,7 +5,7 @@ export const EXPERIENCE: ExperienceShowcaseListItemProps[] = [
     title: "Java Development Intern",
     organisation: {
       name: "Codec",
-      href: "https://codec.edu.in/",
+      href: "https://codectechnologies.in/",
     },
     date: "Aug 2025 - Sep 2025",
     location: "Remote",
