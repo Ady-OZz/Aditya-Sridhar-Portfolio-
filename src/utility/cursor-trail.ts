@@ -193,6 +193,7 @@ export function cursorTrail(props: CursorTrail) {
   }
 
   function cleanUp() {
+    stopAnimation();
     document.removeEventListener("mousemove", move);
     document.removeEventListener("touchmove", createLine);
     document.removeEventListener("touchstart", createLine);
