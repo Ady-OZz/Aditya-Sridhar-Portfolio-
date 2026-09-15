@@ -1,6 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Image, { ImageProps } from "next/image";
 import { StaticImageData } from "next/image";
+
+/**
+ * Cap the canvas processing resolution so oversized phone photos
+ * (routinely 12+ megapixels) can never tank client-side performance.
+ * The image only renders at a few hundred px on screen, so 600 px
+ * is more than enough for the duotone effect with no visible quality loss.
+ */
+const MAX_PROCESSING_DIMENSION = 600;
 
 interface DuotoneImageProps extends Omit<ImageProps, "src"> {
   src: string | StaticImageData;
@@ -25,6 +33,7 @@ const DuotoneImage: React.FC<DuotoneImageProps> = ({
   ...props
 }) => {
   const [processedImageUrl, setProcessedImageUrl] = useState<string>("");
+  const prevUrlRef = useRef<string>("");
 
   useEffect(() => {
     const canvas = document.createElement("canvas");
@@ -33,6 +42,7 @@ const DuotoneImage: React.FC<DuotoneImageProps> = ({
 
     img.crossOrigin = "anonymous";
     let didFallback = false;
+    let cancelled = false;
 
     img.onerror = () => {
       if (fallbackSrc && !didFallback) {
@@ -42,11 +52,26 @@ const DuotoneImage: React.FC<DuotoneImageProps> = ({
     };
 
     img.onload = () => {
-      canvas.width = img.width;
-      canvas.height = img.height;
+      if (cancelled) return;
+
+      // ── Downscale to capped resolution ──────────────────────────
+      let drawW = img.width;
+      let drawH = img.height;
+
+      if (
+        drawW > MAX_PROCESSING_DIMENSION ||
+        drawH > MAX_PROCESSING_DIMENSION
+      ) {
+        const scale = MAX_PROCESSING_DIMENSION / Math.max(drawW, drawH);
+        drawW = Math.round(drawW * scale);
+        drawH = Math.round(drawH * scale);
+      }
+
+      canvas.width = drawW;
+      canvas.height = drawH;
 
       if (ctx) {
-        ctx.drawImage(img, 0, 0);
+        ctx.drawImage(img, 0, 0, drawW, drawH);
 
         const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
         const data = imageData.data;
@@ -114,7 +139,15 @@ const DuotoneImage: React.FC<DuotoneImageProps> = ({
         }
 
         ctx.putImageData(imageData, 0, 0);
-        setProcessedImageUrl(canvas.toDataURL("image/png"));
+
+        // Revoke previous object URL to avoid memory leaks
+        if (prevUrlRef.current) {
+          URL.revokeObjectURL(prevUrlRef.current);
+        }
+
+        const url = canvas.toDataURL("image/webp", 0.85);
+        prevUrlRef.current = url;
+        setProcessedImageUrl(url);
       }
     };
 
@@ -122,10 +155,11 @@ const DuotoneImage: React.FC<DuotoneImageProps> = ({
     img.src = imgSrc; // Original image source
 
     return () => {
-      if (processedImageUrl) {
-        URL.revokeObjectURL(processedImageUrl);
-      }
+      cancelled = true;
     };
+    // NOTE: processedImageUrl is intentionally excluded — it's output, not input.
+    // Including it caused an infinite re-render loop.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
     src,
     fallbackSrc,
@@ -133,7 +167,6 @@ const DuotoneImage: React.FC<DuotoneImageProps> = ({
     darkColor,
     contrastFactor,
     sharpnessFactor,
-    processedImageUrl,
   ]);
 
   const hexToRgb = (hex: string) => {
