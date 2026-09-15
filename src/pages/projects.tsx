@@ -46,7 +46,7 @@ export default function Projects() {
               Here are some of the projects I&apos;d like to share
             </span>
           </div>
-          <div className="mt-8 grid grid-cols-1 gap-x-6 gap-y-10 lg:grid-cols-2">
+          <div className="mt-8 grid grid-cols-1 items-start gap-x-6 gap-y-10 lg:grid-cols-2">
             {PROJECTS_CARD.map((card, index) => (
               <ProjectCard key={index} {...card} />
             ))}

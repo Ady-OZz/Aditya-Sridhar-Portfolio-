@@ -47,7 +47,14 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
       "/images/projects/jravel-ai-powered-travel-planner/06.png",
     ],
     description:
-      "Full stack collaborative travel planner with a 2-agent Gemini AI workflow that generates personalized destinations. Integrated Firebase Auth, Firestore, and real-time chat, cutting planning effort by 60% and improving collaboration by 45%.",
+      "Full stack collaborative travel planner with a 2-agent Gemini AI workflow that generates personalized destinations.",
+    date: "May 2026",
+    techStack: ["React", "Firebase", "Gemini AI", "Maps", "REST API", "Git"],
+    bullets: [
+      "Engineered a full stack travel planner enabling collaborative trip management with real time itinerary updates.",
+      "Configured a 2-agent Gemini AI workflow that generated personalized destinations, reducing trip planning effort by 60%.",
+      "Integrated Firebase Auth, Firestore, and realtime chat to improve secure collaboration efficiency by 45%.",
+    ],
     sourceCodeHref: "https://github.com/Ady-OZz/Capstone-Project",
   },
   {
@@ -60,7 +67,14 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
       "/images/projects/student-admission-system/04.png",
     ],
     description:
-      "Java Swing-based admission management system with MD5 authentication, JDBC/MySQL backend, and real-time record retrieval. Scaled backend services by 15%.",
+      "Java Swing-based admission management system with MD5 authentication and a JDBC/MySQL backend.",
+    date: "Aug 2025",
+    techStack: ["Java", "Swing", "JDBC", "MySQL", "Git"],
+    bullets: [
+      "Created a Java Swing based admission management system to support student onboarding and administrative operations.",
+      "Secured authentication using MD5 hashing and access control mechanisms to protect database operations.",
+      "Enabled real time record retrieval and updates via JDBC and MySQL, scaling backend services by 15%.",
+    ],
     sourceCodeHref: "https://github.com/Ady-OZz/Student-Mngnt-SYS",
   },
   {
@@ -74,7 +88,14 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
       "/images/projects/e-waste-management-website/05.png",
     ],
     description:
-      "Responsive web app that automates e-waste pickup workflows, connects users with refurbishment centers, and improves navigation flow by 30%.",
+      "Responsive web app that automates e-waste pickup workflows and connects users with refurbishment centers.",
+    date: "Jan 2025",
+    techStack: ["HTML", "CSS", "JavaScript", "REST API", "Git"],
+    bullets: [
+      "Developed a responsive web application to automate e-waste pickup workflows, reducing manual coordination by 40%.",
+      "Implemented routing logic to connect users with refurbishment centers, eliminating intermediaries.",
+      "Improved usability by building reusable UI components and streamlining navigation flow by 30%.",
+    ],
     sourceCodeHref: "https://github.com/Ady-OZz/EWMS",
   },
   {
@@ -82,7 +103,12 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
     favicon: "/favicon.ico",
     imageUrl: ["/images/projects/budget-tracker-application/01.png"],
     description:
-      "Integrated frontend and backend components with database queries to automate expense tracking, cutting task time by 35%.",
+      "Integrated frontend and backend components with database queries to automate expense tracking.",
+    date: "Oct 2024",
+    techStack: ["Git"],
+    bullets: [
+      "Integrated frontend, backend, and database layers to support end-to-end application functionality, automating expense tracking and cutting task completion time by 35%.",
+    ],
     sourceCodeHref: "https://github.com/Ady-OZz/Expense-Tracker",
   },
 ];
