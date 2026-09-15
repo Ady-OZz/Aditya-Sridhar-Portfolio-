@@ -1,0 +1,58 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*
+!.env.example
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# editor
+.vscode
+.idea
+
+# docker (not used — Vercel deploy)
+Dockerfile
+.dockerignore
+
+# generated
+public/sitemap.xml
+public/robots.txt
+
+# internal notes
+DEPLOY.md
+AGENT_TASKS.md
+pnpm-workspace.yaml
+
+# raw screenshot source folders (processed copies are in public/images/projects/)
+E Waste managemnet images/
+Expanse Tracker images/
+Jravel AI Travel Planner images/
+Student mangaement System images/
+Aditya_Sridhar_Resume.pdf
